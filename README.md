@@ -1,39 +1,29 @@
-# WinOptimizer v2.0
+# WinOptimizer v2.1 — Debloat Edition
 
-Ferramenta modular em PowerShell para manutencao, diagnostico, limpeza, reparo, perfis de energia, rede, privacidade e relatorios no Windows.
+Ferramenta modular em PowerShell para manutenção, diagnóstico, limpeza, reparo, rede, perfis de energia, privacidade e debloat controlado para Windows 10/11.
 
-## Instalacao
+## Instalação
 
-Abra o **PowerShell como Administrador** e execute:
+Abra o PowerShell como Administrador e execute:
 
 ```powershell
 irm https://raw.githubusercontent.com/Erbetluan11/WinOptimizer/main/install.ps1 | iex
 ```
 
-## Estrutura
+## Debloat
 
-```text
-WinOptimizer/
-├── install.ps1
-├── run.ps1
-├── modules/
-│   ├── Core.ps1
-│   ├── Diagnostics.ps1
-│   ├── Backup.ps1
-│   ├── Profiles.ps1
-│   ├── Cleanup.ps1
-│   ├── Repair.ps1
-│   ├── Network.ps1
-│   ├── Reports.ps1
-│   └── Restore.ps1
-└── config/
-    └── tweaks.json
-```
+- **Seguro:** sugestões, anúncios, Activity History, Advertising ID, experiências personalizadas e apps claramente opcionais.
+- **Performance:** adiciona mais apps opcionais e permite desabilitar serviços Xbox se o usuário confirmar que não usa Xbox/Game Pass.
+- **Agressivo:** remove provisionamento dos apps escolhidos, Cortana quando presente, oferece desativar serviços de telemetria e Windows Error Reporting, e desativa tarefas selecionadas de telemetria.
 
-## Seguranca
+## Proteções
 
-- Execute como administrador.
-- Leia cada descricao antes de confirmar uma acao.
-- Crie um ponto de restauracao antes de ajustes importantes.
-- Os logs, backups e relatorios ficam em `C:\ProgramData\WinOptimizer\`.
-- O codigo e publico e pode ser revisado antes da execucao.
+- Pede confirmação antes das ações.
+- Cria backup de Registro antes do debloat.
+- Tenta criar ponto de restauração.
+- Não remove Edge, Microsoft Store, Defender, WebView2, .NET, áudio, rede ou Windows Update.
+- Logs, backups e relatórios ficam em `C:\ProgramData\WinOptimizer\`.
+
+## Aviso
+
+Nenhuma ferramenta torna todas as edições do Windows “zero telemetria”. Leia o código e a descrição de cada opção antes de confirmar. Apps removidos podem precisar ser reinstalados pela Microsoft Store ou `winget`.

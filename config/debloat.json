@@ -1,0 +1,88 @@
+{
+  "name": "WinOptimizer Debloat Edition",
+  "version": "2.1.0",
+  "telemetryServices": [
+    "DiagTrack",
+    "dmwappushservice"
+  ],
+  "xboxServices": [
+    "XblAuthManager",
+    "XblGameSave",
+    "XboxNetApiSvc",
+    "XboxGipSvc"
+  ],
+  "levels": {
+    "Safe": {
+      "description": "Remove sugestoes, anuncios e apps opcionais de baixo risco. Nao remove Xbox, Store, Edge, Defender, Fotos, Calculadora, Paint ou Bloco de Notas.",
+      "apps": [
+        "Microsoft.BingNews",
+        "Microsoft.BingWeather",
+        "Microsoft.GetHelp",
+        "Microsoft.Getstarted",
+        "Microsoft.Microsoft3DViewer",
+        "Microsoft.MicrosoftOfficeHub",
+        "Microsoft.MicrosoftSolitaireCollection",
+        "Microsoft.People",
+        "Microsoft.SkypeApp",
+        "Microsoft.Todos",
+        "Microsoft.WindowsFeedbackHub",
+        "Microsoft.WindowsMaps",
+        "Microsoft.ZuneMusic",
+        "Microsoft.ZuneVideo"
+      ]
+    },
+    "Performance": {
+      "description": "Inclui o nivel Seguro e apps adicionais. A desativacao de servicos Xbox exige confirmacao separada.",
+      "apps": [
+        "Microsoft.BingNews",
+        "Microsoft.BingWeather",
+        "Microsoft.GetHelp",
+        "Microsoft.Getstarted",
+        "Microsoft.Microsoft3DViewer",
+        "Microsoft.MicrosoftOfficeHub",
+        "Microsoft.MicrosoftSolitaireCollection",
+        "Microsoft.People",
+        "Microsoft.PowerAutomateDesktop",
+        "Microsoft.SkypeApp",
+        "Microsoft.Todos",
+        "Microsoft.WindowsFeedbackHub",
+        "Microsoft.WindowsMaps",
+        "Microsoft.ZuneMusic",
+        "Microsoft.ZuneVideo",
+        "Microsoft.Xbox.TCUI",
+        "Microsoft.XboxApp",
+        "Microsoft.XboxGamingOverlay",
+        "Microsoft.XboxGameOverlay",
+        "Microsoft.XboxIdentityProvider",
+        "Microsoft.XboxSpeechToTextOverlay"
+      ]
+    },
+    "Aggressive": {
+      "description": "Inclui Performance, remove provisionamento desses apps e tenta remover Cortana. Use somente se entende as consequencias.",
+      "apps": [
+        "Microsoft.BingNews",
+        "Microsoft.BingWeather",
+        "Microsoft.GetHelp",
+        "Microsoft.Getstarted",
+        "Microsoft.Microsoft3DViewer",
+        "Microsoft.MicrosoftOfficeHub",
+        "Microsoft.MicrosoftSolitaireCollection",
+        "Microsoft.People",
+        "Microsoft.PowerAutomateDesktop",
+        "Microsoft.SkypeApp",
+        "Microsoft.Todos",
+        "Microsoft.WindowsFeedbackHub",
+        "Microsoft.WindowsMaps",
+        "Microsoft.ZuneMusic",
+        "Microsoft.ZuneVideo",
+        "Microsoft.Xbox.TCUI",
+        "Microsoft.XboxApp",
+        "Microsoft.XboxGamingOverlay",
+        "Microsoft.XboxGameOverlay",
+        "Microsoft.XboxIdentityProvider",
+        "Microsoft.XboxSpeechToTextOverlay",
+        "Microsoft.549981C3F5F10"
+      ]
+    }
+  }
+}
