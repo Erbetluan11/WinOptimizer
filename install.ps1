@@ -43,7 +43,6 @@ function Pause-WinOptimizer {
 }
 
 try {
-    # Ajuda Windows PowerShell 5.1 a usar TLS moderno no download HTTPS.
     [Net.ServicePointManager]::SecurityProtocol = `
         [Net.ServicePointManager]::SecurityProtocol -bor `
         [Net.SecurityProtocolType]::Tls12
@@ -79,11 +78,15 @@ try {
 
     Write-Host "[+] Baixando a versao mais recente..." -ForegroundColor Yellow
 
-    # O parametro nocache reduz a chance de receber uma copia antiga em cache.
     $NoCache = Get-Random
 
+    # Corrigido: ${RunUrl} deixa claro onde a variavel termina.
+    $DownloadUrl = "${RunUrl}?nocache=$NoCache"
+
+    Write-Host "[+] URL: $DownloadUrl" -ForegroundColor DarkGray
+
     Invoke-WebRequest `
-        -Uri "$RunUrl?nocache=$NoCache" `
+        -Uri $DownloadUrl `
         -Headers $Headers `
         -OutFile $RunFile `
         -UseBasicParsing
@@ -103,7 +106,6 @@ try {
 
     Start-Sleep -Milliseconds 700
 
-    # Executa o programa localmente sem mudar a Execution Policy do Windows.
     & powershell.exe `
         -NoLogo `
         -NoProfile `
