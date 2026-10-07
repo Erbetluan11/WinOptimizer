@@ -1,0 +1,10 @@
+{
+  "name": "WinOptimizer",
+  "version": "2.0.0",
+  "profiles": {
+    "Gaming": { "description": "Perfil conservador para jogos", "powerPlan": "High performance", "temporaryCleanup": true, "disableCriticalServices": false, "disableWindowsUpdate": false, "disableDefender": false },
+    "Balanced": { "description": "Perfil padrao equilibrado", "powerPlan": "Balanced", "temporaryCleanup": true, "disableCriticalServices": false },
+    "Laptop": { "description": "Perfil conservador para notebook", "powerPlan": "Balanced", "temporaryCleanup": true, "batteryFriendly": true, "disableCriticalServices": false }
+  },
+  "privacy": { "AllowTelemetry": 0, "DisableWindowsConsumerFeatures": 1, "AdvertisingIdEnabled": 0 }
+}
